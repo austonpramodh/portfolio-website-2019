@@ -1,0 +1,18 @@
+.Footer {
+  margin-top: 0;
+  background-color: black;
+  height: 12rem;
+}
+
+.Footer-Button{
+  margin-bottom: 2rem;
+}
+
+.Footer-Name{
+  margin-top: 2rem;
+  color: white;
+}
+
+.Footer-Year{
+  color: red;
+}

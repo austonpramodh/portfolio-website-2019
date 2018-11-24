@@ -1,0 +1,13 @@
+.NavigationBar {
+  text-align: right;
+}
+
+.NavigationBar-Container{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.NavigationBar-Button {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}

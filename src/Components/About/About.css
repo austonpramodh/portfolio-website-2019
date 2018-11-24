@@ -1,0 +1,30 @@
+.About {
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.About-jumbotron {
+  background-color: transparent;
+}
+
+.About-header {
+  color: #282c34;
+}
+
+.About-Container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+
+.About-mainIcons{
+  height: 10rem;
+  width: 10rem;
+}
+
+.progress-bar {
+     -webkit-transition: width .3s ease;
+     -o-transition: width .3s ease;
+     transition: width .3s ease;
+ }
