@@ -1,30 +1,39 @@
 .About {
-  max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
+  background: #1fa2ff; /* fallback for old browsers */
+  background: linear-gradient(
+    to right,
+    #a6ffcb,
+    #12d8fa,
+    #1fa2ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(
+    to right,
+    #a6ffcb,
+    #12d8fa,
+    #1fa2ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  /* background-image: url("Stripe.jpg"); */
 }
-
 .About-jumbotron {
   background-color: transparent;
+  margin-bottom: 0px;
 }
-
 .About-header {
   color: #282c34;
 }
-
 .About-Container {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;
 }
-
-.About-mainIcons{
+.About-mainIcons {
   height: 10rem;
   width: 10rem;
 }
-
 .progress-bar {
-     -webkit-transition: width .3s ease;
-     -o-transition: width .3s ease;
-     transition: width .3s ease;
- }
+  -webkit-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}

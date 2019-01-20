@@ -1,18 +1,22 @@
 .Footer {
   margin-top: 0;
   background-color: black;
-  height: 12rem;
+  height: 16rem;
 }
 
-.Footer-Button{
+.Footer-Button {
   margin-bottom: 2rem;
 }
 
-.Footer-Name{
+.Footer-Name {
   margin-top: 2rem;
   color: white;
 }
 
-.Footer-Year{
+.Footer-Year {
   color: red;
+}
+.Footer-Icon:hover {
+  background-color: white;
+  transition: background-color 0.5s;
 }
