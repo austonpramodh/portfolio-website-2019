@@ -10,6 +10,7 @@ export default {
     "&:hover": {
       backgroundColor: "white",
       transition: "background-color 0.5s",
+      borderRadius: "1rem",
     },
   },
   name: {
