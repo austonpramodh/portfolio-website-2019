@@ -2,7 +2,6 @@ export default {
   container: {
     marginTop: 0,
     backgroundColor: "black",
-    height: "12rem",
   },
   button: {
     marginBottom: "2rem",
@@ -16,6 +15,7 @@ export default {
   name: {
     marginTop: "2rem",
     color: "white",
+    paddingBottom: "2px",
   },
   year: {
     color: "red",

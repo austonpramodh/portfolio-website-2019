@@ -15,7 +15,6 @@ const App = props => {
   const { classes } = props;
   return (
     <div className={classes.container}>
-      Hellownvklj
       <NavigationBar />
       <Header />
       <About />

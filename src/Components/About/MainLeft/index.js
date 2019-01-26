@@ -11,7 +11,7 @@ const MainLeft = () => (
     <Fade left>
       <Hexagon
         style={{ stroke: "#fff" }}
-        backgroundImage="assets/profile.jpg"
+        backgroundImage="assets/profile.webp"
         href="http://facebook.com/austonpramodh"
         diagnol={200}
       />
