@@ -1,13 +1,27 @@
-import React from 'react';
-const HozizontalLine = ({ color , width , height }) => (
-    <hr
-        style={{
-            color: (color ? color : 'black'),
-            backgroundColor: (color ? color : 'black'),
-            height: (height ? height : '0.25rem'),
-            width: (width ? width : "2rem"),
-        }}
-    />
+import React from "react";
+import PropTypes from "prop-types";
+
+const HorizontalLine = ({ color, width, height }) => (
+  <hr
+    style={{
+      color,
+      backgroundColor: color,
+      height,
+      width,
+    }}
+  />
 );
 
-export default HozizontalLine;
+HorizontalLine.propTypes = {
+  color: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
+};
+
+HorizontalLine.defaultProps = {
+  color: "black",
+  height: "0.25rem",
+  width: "2rem",
+};
+
+export default HorizontalLine;

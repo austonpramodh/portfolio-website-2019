@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
-import App from './Components/App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import App from "./Components/App";
 // import * as serviceWorker from './serviceWorker';
 
-
-
-ReactDOM.render(<App />, document.getElementById('root'));
+// eslint-disable-next-line no-undef
+ReactDOM.render(<App />, document.getElementById("root"));
 // ReactDOM.render(<p>hello world</p>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import "./Contact.css";
+import PropTypes from "prop-types";
 import { Form, FormGroup, Input, Button, Jumbotron, Alert } from "reactstrap";
-import HorizontalLine from "../../utils/HoriontalLine";
 import { Fade, Bounce } from "react-reveal";
 import * as emailjs from "emailjs-com";
+import injectSheet from "react-jss";
+import HorizontalLine from "../../utils/HoriontalLine";
+import Styles from "./index.css";
 
 class Contact extends Component {
   state = {
@@ -13,17 +15,18 @@ class Contact extends Component {
     sent: false,
     errSending: false,
     sending: false,
-    invalidInput: false
+    invalidInput: false,
   };
+
   handleInputChange = event => {
-    const email = event.target.name;
-    const value = event.target.value;
-    this.setState(() => ({ [email]: value }));
-    if (this.state.sent || this.state.errSending || this.state.invalidInput) {
+    const { name, value } = event.target;
+    this.setState(() => ({ [name]: value }));
+    const { sent, errSending, invalidInput } = this.state;
+    if (sent || errSending || invalidInput) {
       this.setState(() => ({
         sent: false,
         errSending: false,
-        invalidInput: false
+        invalidInput: false,
       }));
     }
   };
@@ -36,25 +39,22 @@ class Contact extends Component {
         subject: "auston-XYZ-contactForm",
         message: inputMessage,
         from_name: name,
-        from_email: email
+        from_email: email,
       };
       this.setState(() => ({ sending: true }));
       emailjs
-        .send(
-          "gmail",
-          "auston_xyz_contactform",
-          templateParams,
-          "user_CUOJ6CT4RKSCkTtFsvamY"
-        )
+        .send("gmail", "auston_xyz_contactform", templateParams, "user_CUOJ6CT4RKSCkTtFsvamY")
         .then(
+          // eslint-disable-next-line no-unused-vars
           response => {
             this.setState(() => ({ sending: false }));
             this.setState(() => ({ sent: true }));
           },
+          // eslint-disable-next-line no-unused-vars
           err => {
             this.setState(() => ({ sending: false }));
             this.setState(() => ({ errSending: true }));
-          }
+          },
         );
       this.setState(() => ({ name: "", email: "", inputMessage: "" }));
     } else {
@@ -63,15 +63,19 @@ class Contact extends Component {
   };
 
   render() {
+    const { classes } = this.props;
+    const { name, email, inputMessage, sent, errSending, sending, invalidInput } = this.state;
     return (
-      <div className="Contact" id="ContactPage">
-        <Jumbotron className="Contact-jumbotron">
+      <div className={classes.container} id="ContactPage">
+        <Jumbotron className={classes.jumbotron}>
           <Fade top>
-            <h1 className="display-3 Contact-header">Contact</h1>
+            <h1 className={`display-3 ${classes.header}`}>Contact</h1>
           </Fade>
-          <Fade left>{HorizontalLine({ width: "8rem" })}</Fade>
+          <Fade left>
+            <HorizontalLine width="8rem" />
+          </Fade>
           <Fade right>
-            <p className="display-6 Contact-header">
+            <p className={`display-6 ${classes.header}`}>
               have a Question or want to work with me?
             </p>
           </Fade>
@@ -83,8 +87,8 @@ class Contact extends Component {
                   name="name"
                   id="name"
                   placeholder="Name"
-                  className="Contact-Name"
-                  value={this.state.name}
+                  className={classes.name}
+                  value={name}
                   onChange={this.handleInputChange}
                 />
                 <Input
@@ -92,8 +96,8 @@ class Contact extends Component {
                   name="email"
                   id="email"
                   placeholder="Email"
-                  className="Contact-Email"
-                  value={this.state.email}
+                  className={classes.email}
+                  value={email}
                   onChange={this.handleInputChange}
                 />
                 <Input
@@ -101,8 +105,8 @@ class Contact extends Component {
                   name="inputMessage"
                   id="message"
                   placeholder="Your Message"
-                  className="Contact-Message"
-                  value={this.state.inputMessage}
+                  className={classes.message}
+                  value={inputMessage}
                   onChange={this.handleInputChange}
                   autoComplete="off"
                 />
@@ -111,22 +115,16 @@ class Contact extends Component {
             </Form>
           </Fade>
           <Bounce>
-            <div className="Contact-responseMessage">
-              {this.state.sent && (
-                <Alert color="success">Message Sent Successfully</Alert>
-              )}
-              {this.state.errSending && (
+            <div className={classes.responseMessage}>
+              {sent && <Alert color="success">Message Sent Successfully</Alert>}
+              {errSending && (
                 <Alert color="danger">
-                  There is Some error, Please try reloading the page or check
-                  your internet connection.
+                  There is Some error, Please try reloading the page or check your internet
+                  connection.
                 </Alert>
               )}
-              {this.state.sending && (
-                <Alert color="info">Sending Message! Please Wait.</Alert>
-              )}
-              {this.state.invalidInput && (
-                <Alert color="danger">Please check all the Fields.</Alert>
-              )}
+              {sending && <Alert color="info">Sending Message! Please Wait.</Alert>}
+              {invalidInput && <Alert color="danger">Please check all the Fields.</Alert>}
             </div>
           </Bounce>
         </Jumbotron>
@@ -135,4 +133,11 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+Contact.propTypes = {
+  classes: PropTypes.object,
+};
+Contact.defaultProps = {
+  classes: {},
+};
+
+export default injectSheet(Styles)(Contact);
