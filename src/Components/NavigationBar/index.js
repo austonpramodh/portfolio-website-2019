@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Button, Navbar } from "reactstrap";
 import InjectSheet from "react-jss";
@@ -8,8 +8,8 @@ import Styles from "./index.css";
 const NavigationBar = props => {
   const { classes } = props;
   return (
-    <div>
-      <Navbar color="dark" light expand="md" className={classes.bar} fixed="top">
+    <Fragment>
+      <Navbar color="dark" light expand="md" className={classes.bar} sticky="top">
         <div className={classes.container}>
           <AnchorLink href="#headerPage">
             <Button color="primary" className={classes.button}>
@@ -31,7 +31,7 @@ const NavigationBar = props => {
           </AnchorLink>
         </div>
       </Navbar>
-    </div>
+    </Fragment>
   );
 };
 
