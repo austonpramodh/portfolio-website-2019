@@ -1,11 +1,11 @@
 import React from "react";
-import { Container, Row, Col, Jumbotron } from "reactstrap";
+import { Container, Row, Jumbotron } from "reactstrap";
 import injectSheet from "react-jss";
 import PropTypes from "prop-types";
 import Header from "./Header";
-import SubHeader from "./SubHeader";
-import MainLeft from "./MainLeft";
-import MainRight from "./MainRight";
+// import SubHeader from "./SubHeader";
+import Bio from "./Bio";
+// import MainRight from "./MainRight";
 import Styles from "./index.css";
 
 const About = props => {
@@ -15,14 +15,15 @@ const About = props => {
       <Jumbotron className={classes.jumbotron}>
         <Header />
         <Container className={classes.subContainer}>
-          <SubHeader />
+          {/* <SubHeader /> */}
           <Row>
-            <Col>
+            <Bio />
+            {/* <Col>
               <MainLeft />
             </Col>
             <Col>
               <MainRight />
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </Jumbotron>

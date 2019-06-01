@@ -11,7 +11,7 @@ const Header = props => {
   return (
     <div>
       <Fade top>
-        <h1 className={`display-3 ${classes.heading}`}>About</h1>
+        <h1 className={`display-3 ${classes.heading}`}>About Me</h1>
         <Fade right>
           <HorizontalLine width="7rem" color="#4c4c4c" />
         </Fade>

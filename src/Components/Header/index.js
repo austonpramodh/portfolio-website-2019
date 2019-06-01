@@ -20,7 +20,7 @@ const Header = props => {
       <Zoom>
         <h1 className={classes.header}>
           Hey, I'm {isMobile && <br />}Auston Pramodh Barboza.
-          <br />I am a full-stack Developer.
+          <br />I am a full-stack web developer.
           <br />
           <Typer
             dataText={[

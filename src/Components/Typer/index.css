@@ -2,7 +2,7 @@
 
 #cursor {
   /* border-left: 0.1em solid #00ff41; */
-  border-left: 0.1em solid black;
+  border-left: 0.1em solid white;
   animation: blink 0.7s steps(1) infinite;
 }
 

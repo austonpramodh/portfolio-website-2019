@@ -4,7 +4,8 @@ export default {
     backgroundColor: "black",
   },
   button: {
-    marginBottom: "2rem",
+    marginBottom: "1rem",
+    transform: "translateY(-40%)",
   },
   icon: {
     "&:hover": {
@@ -16,7 +17,7 @@ export default {
   name: {
     marginTop: "2rem",
     color: "white",
-    paddingBottom: "2px",
+    paddingBottom: "1rem",
   },
   year: {
     color: "red",
