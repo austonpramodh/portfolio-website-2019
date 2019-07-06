@@ -11,12 +11,14 @@ import Styles from "./App.css";
 const App = props => {
   const { classes } = props;
   return (
-    <div className={classes.container}>
-      <Header />
-      <NavigationBar />
-      <About />
-      <Contact />
-      <Footer />
+    <div className={classes.mainContainer} id="main">
+      <div className={classes.container} id="cook">
+        <Header />
+        <NavigationBar />
+        <About />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 };
