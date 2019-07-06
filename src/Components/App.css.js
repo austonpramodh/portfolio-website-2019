@@ -3,6 +3,7 @@ import backgroundImage from "../Assets/background.JPG";
 export default {
   container: {
     textAlign: "center",
+    background: "rgba(0, 0, 0, 0.30)",
   },
   mainContainer: {
     backgroundImage: `url(${backgroundImage})`,

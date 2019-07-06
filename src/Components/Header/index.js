@@ -16,24 +16,30 @@ const Header = props => {
   const { classes } = props;
   return (
     <div id="headerPage" className={classes.container}>
-      {/* <div className={classes.header}> */}
       <Zoom>
-        <h1 className={classes.header}>
-          Hey, I'm {isMobile && <br />}Auston Pramodh Barboza.
-          <br />I am a full-stack web developer.
-          <br />
-          <Typer
-            dataText={[
-              "ReactJS.",
-              "React Native.",
-              "Flutter.",
-              "Android.",
-              "IOS.",
-              "NodeJS.",
-              "TypeScript.",
-            ]}
-          />
-        </h1>
+        <div className={classes.innerContainer}>
+          <div className={classes.header1}>
+            Hey, I'm {isMobile && <br />}Auston Pramodh Barboza.
+          </div>
+          <div className={classes.textBox}>
+            <div className={classes.header2}>I am a full-stack web developer.</div>
+          </div>
+          <div className={classes.textBox}>
+            <div className={classes.typerBox}>
+              <Typer
+                dataText={[
+                  "ReactJS.",
+                  "React Native.",
+                  "Flutter.",
+                  "Android.",
+                  "IOS.",
+                  "NodeJS.",
+                  "TypeScript.",
+                ]}
+              />
+            </div>
+          </div>
+        </div>
       </Zoom>
       <AnchorLink href="#aboutPage">
         <Icon path={mdiArrowDownThick} size={2} className={classes.icon} />

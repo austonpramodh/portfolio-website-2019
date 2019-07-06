@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-undef
 
+// eslint-disable-next-line no-undef
 const isMobile = window.innerWidth < 700;
 
 export default {
@@ -32,9 +33,36 @@ export default {
     animationTimingFunction: "ease-in-out",
     animationDirection: "alternate",
   },
-  header: {
-    fontSize: isMobile ? "1.5rem" : "2.5rem",
+  innerContainer: {
+    marginTop: "25%",
     marginBottom: isMobile ? "8rem" : "",
-    padding: isMobile ? "0rem 2rem" : "",
+  },
+  header1: {
+    fontSize: isMobile ? "1.5rem" : "2.5rem",
+    padding: isMobile ? "0rem 2rem" : "0px 4px",
+    background: "rgba(0,0,0,0.4)",
+    borderRadius: "8px",
+  },
+  header2: {
+    padding: isMobile ? "0rem 2rem" : "0px 4px",
+    background: "rgba(0,0,0,0.4)",
+    borderRadius: "8px",
+  },
+  textBox: {
+    display: "flex",
+    justifyContent: "center",
+    paddingTop: "8px",
+  },
+  header3: {
+    padding: isMobile ? "0rem 2rem" : "0px 4px",
+    background: "rgba(0,0,0,0.4)",
+    borderRadius: "8px",
+  },
+  typerBox: {
+    background: "rgba(0,0,0,0.4)",
+    borderRadius: "8px",
+    maxHeight: "41px",
+    padding: "0px 8px",
+    position: "relative",
   },
 };
